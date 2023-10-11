@@ -435,6 +435,7 @@ body {
     right: 0;
     border-radius: 100% 0  15px 0;
 }
+
 .card::after {
     background-color: #40e7e7;
     background-size: 100%;
@@ -447,9 +448,6 @@ body {
     height: 100%;
     border-radius: 15px;
     transition: all 0.5s;
-}
-
-.card:hover:after {
 }
 
 .card h4 {
