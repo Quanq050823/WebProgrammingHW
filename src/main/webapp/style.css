@@ -349,24 +349,24 @@ body {
     transform: translateY(0);
 }
 
-.portfolio-layer h4 {
-    font-size: 2.8rem;
-    color: var(--second-bg-color); /* Màu chữ trắng tạo tương phản lớn */
-    -webkit-text-stroke: 1px var(--bg-color); /* Viền ngoài cho chữ với màu nền */
-    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); /* Bóng đổ xám nhạt */
+/*.portfolio-layer h4 {*/
+/*    font-size: 2.8rem;*/
+/*    color: var(--second-bg-color); !* Màu chữ trắng tạo tương phản lớn *!*/
+/*    -webkit-text-stroke: 1px var(--bg-color); !* Viền ngoài cho chữ với màu nền *!*/
+/*    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); !* Bóng đổ xám nhạt *!*/
 
-}
+/*}*/
 
-.portfolio-layer p {
-    font-family: Arial, sans-serif; /* Lựa chọn font chữ */
-    font-size: 24px; /* Kích thước chữ */
-    line-height: 1.4; /* Khoảng cách dòng */
-    color: #ffffff; /* Màu chữ trắng tạo tương phản lớn */
-    -webkit-text-stroke: 1px var(--second-bg-color); /* Viền ngoài cho chữ với màu nền */
-    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); /* Bóng đổ xám nhạt */
-    background-color: #1d1f2a; /* Màu nền */
-    padding: 20px; /* Khoảng cách nội dung với biên */
-}
+/*.portfolio-layer p {*/
+/*    font-family: Arial, sans-serif; !* Lựa chọn font chữ *!*/
+/*    font-size: 24px; !* Kích thước chữ *!*/
+/*    line-height: 1.4; !* Khoảng cách dòng *!*/
+/*    color: #ffffff; !* Màu chữ trắng tạo tương phản lớn *!*/
+/*    -webkit-text-stroke: 1px var(--second-bg-color); !* Viền ngoài cho chữ với màu nền *!*/
+/*    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); !* Bóng đổ xám nhạt *!*/
+/*    background-color: #1d1f2a; !* Màu nền *!*/
+/*    padding: 20px; !* Khoảng cách nội dung với biên *!*/
+/*}*/
 
 
 .portfolio-layer a {
@@ -383,6 +383,7 @@ body {
     font-size: 2rem;
     color: var(--bg-color);
 }
+
 
 .contact {
     color: var(--second-bg-color);
@@ -471,6 +472,60 @@ body {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
+.card {
+    position: relative;
+    width: 395px;
+    height: 215px;
+    background-image: url("img/C06Ex1.png");
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: lightblue;
+    transition: all 0.5s;
+}
+
+.card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card:hover:after {
+    content: "HELLO";
+}
+
 /*KEYFRAMES ANIMATION*/
 @keyframes slideRight {
     0% {
@@ -585,4 +640,5 @@ body {
     .footer{
         padding: 2rem 3%;
     }
+
 }
