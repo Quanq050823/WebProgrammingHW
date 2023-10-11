@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scalr=1.0">
-    <title>Welcome to Quang deptry's Web</title>
+    <title>Welcome to Quang's Web</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo-q-new.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
+<div class="loader_bg">
+    <div class="loader"></div>
+</div>
 
 <body>
 <header class="header">
@@ -27,10 +31,10 @@
         <div class="spinner">
             <div class="spinnerin"></div>
         </div>
-        <h3>Hello, It's me</h3>
+        <h3>Hello,It's me</h3>
         <h1>Duc Quang</h1>
-        <h3>And I'm <span class="muliple-text"></span></h3>
-        <p>This is a website created by Quang to contain Web programming exercises.</p>
+        <h3>I'm <span class="muliple-text"></span></h3>
+        <p>This is my website created to contain Web programming exercises.</p>
 
         <div class="social-media">
             <a href="https://www.facebook.com/quangcuatuonglai/" style="--i:7" ><i class='bx bxl-facebook'></i></a>
@@ -87,36 +91,36 @@
 
     <div class="portfolio-container">
         <div class="portfolio-box">
-            <img src="img/sn1.jpg" alt="">
+            <img src="img/C06Ex1.png" alt="">
             <div class="portfolio-layer">
-                <h4>Chapter 06 Ex1</h4>
-                <p>Website allow user to input information for an survey</p>
+                <h4>Survey with servlet</h4>
+                <p>Web Progamming Chapter 06 </br> EXERCISE 01</p>
                 <a href="https://webex-chap06-1.onrender.com/"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
         <div class="portfolio-box">
-            <img src="img/sn2.jpg" alt="">
+            <img src="img/C06Ex2.png" alt="">
             <div class="portfolio-layer">
-                <h4>Chapter 06 Ex2</h4>
-                <p>Website allow user to input information for an survey</p>
+                <h4>Survey with servlet</h4>
+                <p>Web Progamming Chapter 06 </br> EXERCISE 02</p>
                 <a href="https://deloy-render-emaillist.onrender.com"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
         <div class="portfolio-box">
-            <img src="img/sn3.jpg" alt="">
+            <img src="img/C07Ex1&2.png" alt="">
             <div class="portfolio-layer">
-                <h4>Chapter 07 Ex1&2</h4>
-                <p>Website allow user to downloads .MP3</p>
+                <h4>Session and Cookies</h4>
+                <p>Web Progamming Chapter 07 </br> EXERCISE 01&02</p>
                 <a href="https://webex-chap07-1.onrender.com"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
         <div class="portfolio-box">
-            <img src="img/sn4.jpg" alt="">
+            <img src="img/C07Ex3.png" alt="">
             <div class="portfolio-layer">
-                <h4>Chapter 07 Ex3</h4>
-                <p>Website allow user to Cart .MP3</p>
+                <h4>Session and Cookies</h4>
+                <p>Web Progamming Chapter 07 </br> EXERCISE 03</p>
                 <a href="https://webex-chap07-3.onrender.com"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
@@ -124,18 +128,18 @@
         <div class="portfolio-box">
             <img src="img/sn5.jpg" alt="">
             <div class="portfolio-layer">
-                <h4>Email List Servlet</h4>
-                <a href="#about"><i class='bx bx-link-external'></i></a>
-                <p>Website allow user to input information for an survey</p>
+<!--                <h4>Email List Servlet</h4>-->
+<!--                <p>Website allow user to input information for an survey</p>-->
+<!--                <a href="#about"><i class='bx bx-link-external'></i></a>-->
             </div>
         </div>
 
         <div class="portfolio-box">
             <img src="img/sn6.jpg" alt="">
             <div class="portfolio-layer">
-                <h4>Email List Servlet</h4>
-                <p>Website allow user to input information for an survey</p>
-                <a href="#about"><i class='bx bx-link-external'></i></a>
+<!--                <h4>Email List Servlet</h4>-->
+<!--                <p>Website allow user to input information for an survey</p>-->
+<!--                <a href="#about"><i class='bx bx-link-external'></i></a>-->
             </div>
         </div>
     </div>
@@ -174,6 +178,12 @@
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function (){
+            $('.loader_bg').fadeToggle();
+        }, 1500);
+    </script>
 </section>
 
 </body>

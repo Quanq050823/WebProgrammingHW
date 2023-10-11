@@ -1,3 +1,52 @@
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background: linear-gradient(135deg, #2a3740, #59b8b8);
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader:before, .loader:after {
+    content: '';
+    border: 1em solid #61d2cc;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: .5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 *{
@@ -12,7 +61,7 @@
     overflow-scrolling: unset;
 }
 :root {
-    --bg-color: #1d1f2a;
+    --bg-color: #252a34;
     --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
@@ -301,13 +350,24 @@ body {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    color: var(--second-bg-color); /* Màu chữ trắng tạo tương phản lớn */
+    -webkit-text-stroke: 1px var(--bg-color); /* Viền ngoài cho chữ với màu nền */
+    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); /* Bóng đổ xám nhạt */
+
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
+    font-family: Arial, sans-serif; /* Lựa chọn font chữ */
+    font-size: 24px; /* Kích thước chữ */
+    line-height: 1.4; /* Khoảng cách dòng */
+    color: #ffffff; /* Màu chữ trắng tạo tương phản lớn */
+    -webkit-text-stroke: 1px var(--second-bg-color); /* Viền ngoài cho chữ với màu nền */
+    text-shadow: 2px 2px 2px rgba(136, 136, 136, 0.5); /* Bóng đổ xám nhạt */
+    background-color: #1d1f2a; /* Màu nền */
+    padding: 20px; /* Khoảng cách nội dung với biên */
 }
+
 
 .portfolio-layer a {
     display: inline-flex;
