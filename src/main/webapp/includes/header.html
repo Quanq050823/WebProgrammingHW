@@ -1,8 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="../styles/C6E1.css" type="text/css"/>
-</head>
-<body>
+<header class="header">
+    <a href="#" class="logo">Web Programming
+    </a>
+
+    <nav class="navbar">
+        <a href="#home" style="--i:1" class="active">Home</a>
+        <a href="#about" style="--i:2" >About</a>
+        <a href="#portfolio" style="--i:3" >My Task</a>
+        <a href="#contact" style="--i:5" >Contact</a>
+    </nav>
+</header>
+
+<style>
+
+    .header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: #1c1e28;
+        /*background: var(--bg-color);*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+</style>
+

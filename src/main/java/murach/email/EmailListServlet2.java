@@ -18,7 +18,7 @@ public class EmailListServlet2 extends HttpServlet  {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url = "/C6E2/index.jsp";
+        String url = "/C6E2/index.html";
 
         // get current action
         String action = request.getParameter("action");
@@ -27,7 +27,7 @@ public class EmailListServlet2 extends HttpServlet  {
         }
         // perform action and set URL to appropriate page
         if (action.equals("join")) {
-            url = "/C6E2/index.jsp";    // the "join" page
+            url = "/C6E2/index.html";    // the "join" page
         }
         else if (action.equals("add")) {
             // get parameters from the request

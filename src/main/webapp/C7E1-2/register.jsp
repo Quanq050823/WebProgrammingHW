@@ -24,6 +24,8 @@
     <input type="submit" value="Register" class="margin_left">
 </form>
 
-</body>
-
+</body><br>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </html>

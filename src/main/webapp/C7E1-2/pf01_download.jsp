@@ -31,4 +31,7 @@
 <p><a href="?action=viewCookies">View all cookies</a></p>
 
 </body>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </html>

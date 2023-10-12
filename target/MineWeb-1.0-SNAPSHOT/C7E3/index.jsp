@@ -48,5 +48,8 @@
     </tr>
 </table>
         
-</body>
+</body><br>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </html>

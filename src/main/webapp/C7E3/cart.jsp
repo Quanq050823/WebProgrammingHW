@@ -51,7 +51,7 @@
 <form action="" method="post">
   <input type="hidden" name="action" value="shop">
   <input type="submit" value="Continue Shopping">
-</form>
+</form><br>
 
 <form action="checkout.jsp" method="post">
   <input type="hidden" name="action" value="checkout">
@@ -59,4 +59,8 @@
 </form>
 
 </body>
+<br>
+<a href="../index.html">
+  <input type="submit" value="Back to Home">
+</a>
 </html>

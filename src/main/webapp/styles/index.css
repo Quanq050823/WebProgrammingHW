@@ -108,7 +108,6 @@ body {
     }
 }
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -119,11 +118,10 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    animation-delay: 2s;
 }
 
 .header {
-    animation: slideRight 1s ease forwards;
+    animation: slightUp 1s ease forwards;
 }
 
 .header.sticky {
@@ -148,7 +146,6 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));

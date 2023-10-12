@@ -28,7 +28,9 @@
 
 <p><a href="?action=viewAlbums">View list of albums</a></p>
 
-<p><a href="?action=viewCookies">View all cookies</a></p>
-
+<p><a href="?action=viewCookies">View all cookies</a></p><br>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </body>
 </html>

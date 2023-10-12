@@ -31,4 +31,7 @@ browser is sending to the current server.</p>
 <p><a href="download?action=deleteCookies">Delete all persistent cookies</a></p>
 
 </body>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </html>

@@ -1,4 +1,12 @@
-<%@ include file="/includes/header.html" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+    <link rel="stylesheet" href="../styles/C6E1.css" type="text/css"/>
+</head>
+<body>
+
 
 <h1>Join our email list</h1>
 <p>To join our email list, enter your name and
@@ -22,4 +30,9 @@
     <input type="submit" value="Join Now" class="margin_left">
 </form>
 
-<%@ include file="/includes/footer.jsp" %>
+<p>&copy; Copyright ${currentYear} Mike Murach &amp; Associates</p>
+</body>
+</html>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>

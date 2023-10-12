@@ -56,9 +56,9 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
     font-family: 'Poppins', sans-serif;
-    overflow-scrolling: inherit;
+    /*overflow-scrolling: inherit;*/
 }
 :root {
     --bg-color: #252a34;
@@ -71,11 +71,15 @@ html {
     font-size: 62.5%;
     scroll-snap-type: y mandatory;
 }
-
+.containnerr{
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
+    height: 100vh;
+}
 section{
     height: 100vh;
+    display: flex;
     scroll-snap-allign: start;
-    scroll-snap-stop: always;
 }
 body {
     background: #1d1f2a;

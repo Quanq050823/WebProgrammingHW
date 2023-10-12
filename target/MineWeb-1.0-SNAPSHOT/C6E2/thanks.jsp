@@ -26,11 +26,13 @@
     button in your browser or the Return button shown
     below.</p>
 
-<form action="" method="get">
+<form action="emailList" method="get">
     <input type="hidden" name="action" value="join">
     <input type="submit" value="Return">
-</form>
-
+</form><br>
+<a href="../index.html">
+    <input type="submit" value="Back to Home">
+</a>
 </body>
 </html>
 
