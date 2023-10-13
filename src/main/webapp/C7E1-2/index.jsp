@@ -14,7 +14,7 @@
 
 <h1>List of albums</h1>
 
-<p>User Email: ${cookie.userEmail.value}</p>
+<%--<p>User Email: ${cookie.userEmail.value}</p>--%>
 
 <p>
     <a href="download?action=checkUser&amp;productCode=8601">
