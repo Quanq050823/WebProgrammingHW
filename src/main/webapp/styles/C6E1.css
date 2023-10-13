@@ -1,10 +1,14 @@
 /* The styles for the elements */
 body {
+    align-items: center;
+    align-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 85%;
     margin-left: 2em;
     margin-right: 2em;
     width: 400px;
+    position: relative;
+
 }
 h1 {
     font-size: 140%;
@@ -17,7 +21,6 @@ h2 {
     margin-bottom: .5em;
 }
 label {
-    float: left;
     width: 20em;
     margin-bottom: 0.5em;
 }label {
@@ -74,4 +77,21 @@ th, td {
 form {
     max-width: 350px;
 
+}
+
+
+
+
+/*-------------------------------------------------------------------*/
+.container {
+    background: #00eeee;
+    width: 1500px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.bottom
+{
+    background: #1d1f2a;
 }

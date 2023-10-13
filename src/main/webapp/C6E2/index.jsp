@@ -12,7 +12,6 @@
 <p>To join our email list, enter your name and
    email address below.</p>
 
-@WebServlet (urlPatterns = "/emailList", name = "EmailListServlet")
 <%--<%@ taglib prefix="c" uri="https://java.sun.com/jsp/jstl/core" %>--%>
 <c:if test="${message != null}">
     <p><i>${message}</i></p>

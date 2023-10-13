@@ -6,33 +6,55 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="../styles/C6E1.css" type="text/css"/>
+    <link rel="stylesheet" href="../styles/test.css" type="text/css"/>
 </head>
 <body>
-<h1>Join our email list</h1>
-<p>To join our email list, enter your name and
-   email address below.</p>
 
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<c:if test="${message != null}">
-    <p><i>${message}</i></p>
-</c:if>
+<section class="1">
+    <div>
+        <div class="welcome">
+            <h1>Join our <span>email list</span></h1>
+            <p>To join our email list, enter your name and
+                email address below.</p>
+            <c:if test="${message != null}">
+                <p><i>${message}</i></p>
+            </c:if>
+        </div>
+        <div class="container">
+            <div class="topform">
+                <form action="emailList" method="post">
+                    <input type="hidden" name="action" value="add">
+                    <div class="input-box">
+                        <!--          <label class="pad_top">Email:</label>-->
+                        <input placeholder="Email" type="email" name="email" value="${user.email}"><br>
+                    </div>
+                    <div class="input-box">
+                        <!--          <label class="pad_top">First Name:</label>-->
+                        <input placeholder="First Name" type="text" name="firstName" value="${user.firstName}"><br>
+                    </div>
+                    <div class="input-box">
+                        <!--          <label class="pad_top">Last Name:</label>-->
+                        <input placeholder="Last Name" type="text" name="lastName" value="${user.lastName}"><br>
+                    </div>
+                    <input type="submit" value="Join Now" class="margin_left">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-<form action="emailList" method="post">
-    <input type="hidden" name="action" value="add">
-    <label class="pad_top">Email:</label>
-    <input type="email" name="email" value="${user.email}"><br>
-    <label class="pad_top">First Name:</label>
-    <input type="text" name="firstName" value="${user.firstName}"><br>
-    <label class="pad_top">Last Name:</label>
-    <input type="text" name="lastName" value="${user.lastName}"><br>
-    <label>&nbsp;</label>
-    <input type="submit" value="Join Now" class="margin_left">
-</form>
-<p>&copy; Copyright ${currentYear} Mike Murach &amp; Associates</p>
+<section class="2">
+    <div class="footer">
+        <div class="footer-text">
+            <p>CopyRight &copy; 2030 by DucQuang | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="../index.html">Back to Home</a>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
-<a href="../index.html">
-    <input type="submit" value="Back to Home">
-</a>
+
 <%--<%@ include file="/includes/footer.jsp" %>--%>

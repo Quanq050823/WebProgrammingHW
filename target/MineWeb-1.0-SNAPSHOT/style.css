@@ -71,16 +71,7 @@ html {
     font-size: 62.5%;
     scroll-snap-type: y mandatory;
 }
-.containnerr{
-    scroll-snap-type: y mandatory;
-    overflow: scroll;
-    height: 100vh;
-}
-section{
-    height: 100vh;
-    display: flex;
-    scroll-snap-allign: start;
-}
+
 body {
     background: #1d1f2a;
     color: #ffffff;
