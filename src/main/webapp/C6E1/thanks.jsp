@@ -27,7 +27,7 @@
                     <label>Last Name:</label>
                     <span>${user.lastName}</span><br>
                 </div>
-            </div>
+            </div><br>
             <p>"To enter another email address, click on the Back
                 button in your browser or the <span>Return button</span> shown
                 below."</p>

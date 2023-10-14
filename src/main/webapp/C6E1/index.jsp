@@ -18,7 +18,7 @@
             <c:if test="${message != null}">
                 <p style="border: #1c1e28; text-align: center; color: #ea1717"><i>${message}</i></p>
             </c:if>
-        </div>
+        </div><br>
         <div class="container">
             <div class="topform">
                 <form action="emailList" method="post">
