@@ -1,31 +1,53 @@
 /* Add colorful CSS styles here */
 
+:root {
+    --text-color: #ffffe1;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #252a34;
+    background: #252a34;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .container {
     width: 40%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-.topform {
-    background-color: #0f7d7d;
-    padding: 20px;
+.container form p {
+    display: grid;
+    place-items: center;
+}
+.form {
+    background: linear-gradient(135deg, #2a3c40, #59b8b8);
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.welcome {
 
-}
 label {
-    display: block;
+    /*display: block;*/
     margin-bottom: 5px;
-    font-weight: bold;
+}
+.output {
+    padding: 7px;
+}
+.output label{
+    color: var(--text-color);
+}
+.output span {
+    color: var(--text-color);
+    font-style: italic;
+    font-size: larger;
 }
 
 input[type="email"],
@@ -38,18 +60,25 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: #36d4dc;
+    background-color: #041617;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 .welcome h1 {
     font-size: 45px;
+    border: 19px;
+    border: #1d1f2a;
 }
 .welcome h1 span {
     color: #36D4DCFF;
+}
+
+.welcome p {
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -63,18 +92,24 @@ h1 {
     color: #ffffff;
 }
 
-p {
-    color: #ffffe1;
+.form p {
     text-align: center;
 }
 
+.form p span{
+    color: #00ffd9;
+}
+
+p {
+    color: var(--text-color);
+}
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 9%;
     background: #323946;
-    max-height: 10px;
+    height: 12px;
 }.footer a {
      color: #ffffe1;
  }
@@ -101,9 +136,23 @@ input[type="submit"]:hover {
     box-shadow: 0 0 1rem #36D4DCFF;
 }
 
+input[type="submit"] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #36D4DCFF;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
 .footer-iconTop a i {
     font-size: 2.4rem;
     color: #323946;
+}
+
+i {
+    color: #ff0b0b;
 }
 
 .input-box
@@ -111,5 +160,16 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 84vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.container p{
+    text-align: center;
 }
 /* Add additional colorful styles as needed */

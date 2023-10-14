@@ -49,7 +49,7 @@ public class EmailListServlet extends HttpServlet {
             String message;
             if (firstName == null || lastName == null || email == null ||
                     firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
-                message = "Please fill out all three text boxes.";
+                message = " 'Please fill out all three text boxes.' ";
                 url = "/C6E1/index.jsp";
             }
             else {
