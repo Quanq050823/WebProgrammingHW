@@ -12,7 +12,6 @@ import java.io.IOException;
 
 @WebServlet (urlPatterns = "/C7E1-2/download", name = "DownloadServlet")
 public class DownloadServlet extends HttpServlet {
-
     @Override
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
