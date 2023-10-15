@@ -1,61 +1,161 @@
-/* The styles for the elements */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
-    margin-left: 2em;
-    margin-right: 2em;
-    width: 400px;
-}
-h1 {
-    font-size: 140%;
-    color: teal;
-    margin-bottom: .5em;
-}
-h2 {
-    font-size: 120%;
-    color: teal;
-    margin-bottom: .5em;
-}
-label {
-    float: left;
-    width: 7em;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-input[type="text"], input[type="email"] {  /* An attribute selector */
-    width: 15em;
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-}
-span {
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-}
-br {
-    clear: both;
+@charset "utf-8";
+
+*{
+    --text-color: #ffffe1;
+    --background-color: #252a34;
 }
 
-/* The styles for the tables */
-table {
-    border: 1px solid black;
-    border-collapse: collapse;
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
-th, td {
-    border: 1px solid black;
-    text-align: left;
-    padding: .5em;
+p {
+    color: var(--text-color);
+    text-align: center;
+}
+header{
+    margin: 0;
+    width: 100%;
+    position: relative;
 }
 
-/* The styles for the classes */
-.pad_top {
-    padding-top: 0.25em;
-}
-.margin_left {
-    margin-left: 0.5em;
-}
-.align_left {
+header a{
+    flex: 1;
+    width: 50px;
     text-align: left;
 }
-.align_right {
+
+header h1{
+    flex: 1;
+    text-align: center;
+    font-size: 45px;
+    border: 19px;
+    border: #1d1f2a;
+    color: var(--text-color);
+}
+h1 span {
+    color: #36D4DCFF;
+}
+
+header p{
+    text-align: center;
+}
+section{
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.album_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 170px;
+}
+
+.album{
+    width: 240px;
+    height: 270px;
+    border: 1px solid rgb(0, 255, 225);
+    border-radius: 5%;
+    padding: 10px;
+    margin: 15px;
+    background-color: var(--background-color);
+    transition: .5s ease;
+}
+
+.album:hover{
+    box-shadow: 0 0 1rem #36D4DCFF;
+}
+
+.album:hover .album_title{
+    color: rgb(0, 255, 227);
+    font-size: 1.1em;
+}
+.album:hover .album_img{
+    width: 240px;
+    height: 220px;
+    border: 1px solid rgb(177,212,224);
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.album_img{
+    /*transform: color 2s ease;*/
+    width: 235px;
+    height: 215px;
+}
+
+a p{
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    /*transform: color 0.5s ease;*/
+}
+
+header{
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+header a{
+    flex: 1;
+    width: 50px;
     text-align: left;
+}
+
+header .back_zaohome{
+    margin-right: auto;
+}
+
+
+header h2{
+    flex: 1;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: #323946;
+    height: 12px;
+    color: var(--text-color);
+}.footer a {
+     color: #ffffe1;
+ }
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #36D4DCFF;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem #36D4DCFF;
+}
+
+#content {
+    height: 83vh;
 }

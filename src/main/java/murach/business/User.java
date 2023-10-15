@@ -16,10 +16,10 @@ public class User implements Serializable {
         firstName = "";
         lastName = "";
         email = "";
-        dateofBirth = "";
-        hearabout = "";
-        receiveA = "";
-        contactBy = "";
+//        dateofBirth = "";
+//        hearabout = "";
+//        receiveA = "";
+//        contactBy = "";
     }
 
     public User(String firstName, String lastName, String email) {
@@ -96,6 +96,6 @@ public class User implements Serializable {
     }
 
     public void setContactBy(String contactBy) {
-        this.contactBy = contactBy;
+        this.contactBy  = contactBy;
     }
 }

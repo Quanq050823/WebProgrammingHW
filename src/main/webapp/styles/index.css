@@ -108,6 +108,7 @@ body {
     }
 }
 .header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -118,6 +119,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    animation-delay: 2s;
 }
 
 .header {

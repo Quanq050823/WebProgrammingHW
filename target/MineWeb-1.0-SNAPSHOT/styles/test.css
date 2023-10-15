@@ -1,5 +1,8 @@
 /* Add colorful CSS styles here */
-
+*{
+    --text-color: #ffffe1;
+    --background-color: #252a34;
+}
 :root {
     --text-color: #ffffe1;
 }
@@ -13,6 +16,7 @@ body {
 }
 
 .container {
+    background-color: #36d4dc;
     width: 40%;
     margin: 0 auto;
     display: flex;
@@ -24,9 +28,20 @@ body {
     display: grid;
     place-items: center;
 }
+.musiccontainer {
+    width: 80%;
+    height: 100px;
+    background-color: #ff0b0b;
+    display: flex;
+    color: #ff0b0b;
+}
+
+.musiccontainer .music-card {
+
+}
 .form {
     background: linear-gradient(135deg, #2a3c40, #59b8b8);
-    padding: 30px;
+    padding: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
@@ -72,12 +87,20 @@ input[type="submit"] {
     font-size: 45px;
     border: 19px;
     border: #1d1f2a;
+    color: #36d4dc;
+}
+.welcome h2 {
+    font-size: 25px;
+    border: 19px;
+    border: #1d1f2a;
+    text-align: center;
+    color: var(--text-color);
 }
 .welcome h1 span {
     color: #36D4DCFF;
 }
 
-.welcome p {
+p{
     text-align: center;
 }
 a {
@@ -165,11 +188,181 @@ i {
 .content {
     position: relative;
     width: 100%;
-    height: 84vh;
     justify-content: space-between;
     align-items: center;
 }
 .container p{
     text-align: center;
 }
-/* Add additional colorful styles as needed */
+.topform {
+    background-color: #ff0b0b;
+    padding: 40px;
+    width: 300px;
+    border: #1d1f2a;
+    border-radius: 2%;
+    background: #252a34;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.topform2 {
+    background-color: #ff0b0b;
+    padding: 40px;
+    width: 300px;
+    border: #1d1f2a;
+    border-radius: 2%;
+    background: #252a34;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-left: 570px;
+}
+.topform input {
+    text-align: center;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Reem+Kufi';
+
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.music-card {
+    margin: 100px auto;
+    background: #fff;
+    box-shadow: 0px 8px 28px -9px rgba(0,0,0,0.45);
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    border-radius: 6px;
+}
+
+.image {
+    background: url('http://static1.squarespace.com/static/530b728de4b04fc9b23a5988/t/569880381a5203aa7d44c1a8/1452834873397/00.jpg?format=1000w') no-repeat 75%;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.3;
+    height: 300px;
+    width: 300px;
+}
+
+.image:after {
+    height: 100px;
+    content: '';
+    top: 200px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(rgba(9, 2, 4, 0), #444);
+}
+
+.album_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.album_list p{
+    text-align: center;
+}
+
+.album{
+    width: 240px;
+    height: 270px;
+    border: 1px solid rgb(0, 255, 225);
+    border-radius: 5%;
+    padding: 10px;
+    margin: 15px;
+    background-color: var(--background-color);
+    transition: .5s ease;
+}
+.album_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.album:hover{
+    box-shadow: 0 0 1rem #36D4DCFF;
+}
+
+.album:hover .album_title{
+    color: rgb(0, 255, 227);
+    font-size: 1.1em;
+}
+.album:hover .album_img{
+    width: 240px;
+    height: 220px;
+    border: 1px solid rgb(177,212,224);
+}
+.album_img{
+    /*transform: color 2s ease;*/
+    width: 235px;
+    height: 215px;
+}
+
+
+
+.botform button2 {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #36d4dc;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #36d4dc;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+
+.botform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botform a{
+    padding: 10px;
+}
+
+.botform button2:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #36d4dc;
+    z-index: -1;
+}
+
+.botform button2:hover, button:focus {
+    color: white;
+}
+
+.botform button2:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.botform button2:active {
+    transform: scale(0.9);
+}

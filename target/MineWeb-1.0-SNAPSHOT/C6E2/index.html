@@ -3,55 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="../styles/C6E2.css" type="text/css"/>
+    <link rel="stylesheet" href="../styles/c6e2.css" type="text/css"/>
 </head>
 <body>
-<img src="https://scontent.fsgn14-1.fna.fbcdn.net/v/t1.15752-9/366088940_1429005554614556_6941824722883838882_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=UM3v52iTen4AX8kfIf0&_nc_oc=AQkJnvmk1x3KV2aCS-wjMyoAG-h_r_T8nWhAXDVdv6PmJBk_v7CXp9jdMDVVZQPovgQ&_nc_ht=scontent.fsgn14-1.fna&oh=03_AdR0a39RR50fye0bBQbrsSI0RbjhFSHt2gbNReVnRM2QIw&oe=6528C0E7" alt="JavaLogo" width="100">
+<section>
+    <div class="content">
+        <div class="welcome" style="justify-content: center">
+            <h1>Survey</h1>
+            <img src="https://scontent.fsgn14-1.fna.fbcdn.net/v/t1.15752-9/366088940_1429005554614556_6941824722883838882_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_ohc=UM3v52iTen4AX8kfIf0&_nc_oc=AQkJnvmk1x3KV2aCS-wjMyoAG-h_r_T8nWhAXDVdv6PmJBk_v7CXp9jdMDVVZQPovgQ&_nc_ht=scontent.fsgn14-1.fna&oh=03_AdR0a39RR50fye0bBQbrsSI0RbjhFSHt2gbNReVnRM2QIw&oe=6528C0E7" alt="JavaLogo" width="100">
+            <p>If you have a moment, we'd appreciate it if you fill out this survey</p>
+        </div><br>
+        <div class="container">
+            <div class="topform">
+                <h2>Your information</h2>
+                <form action="emailList" class="form1">
+                    <input type="hidden" name="action" value="add">
 
-<h1>Survey</h1>
-<p>If you have a moment, we'd appreciate it if you fill out this survey</p>
-<h2>Your information</h2>
+                    <label>Email:</label>
+                    <input type="email" name="email" required><br>
 
-<form action="emailList" method="post">
-    <input type="hidden" name="action" value="add">
+                    <label>First Name:</label>
+                    <input type="text" name="firstName" required><br>
 
-    <label>Email:</label>
-    <input type="email" name="email" required><br>
+                    <label>Last Name:</label>
+                    <input type="text" name="lastName" required><br>
 
-    <label>First Name:</label>
-    <input type="text" name="firstName" required><br>
+                    <label>Date of birth:</label>
+                    <input type="date" name="dateofBirth" placeholder="dd/mm/yyyy" required>
 
-    <label>Last Name:</label>
-    <input type="text" name="lastName" required><br>
+                    <h2>How did your hear about us?</h2>
+                    <p class="choose">
+                        <input type="radio" name="hearabout" id="1" value="Search engine">
+                        <label for="1">Search engine</label><br>
+                        <input type="radio" name="hearabout" id="2" value="Word of mouth">
+                        <label for="2">Word of mouth</label><br>
+                        <input type="radio" name="hearabout" id="3" value="Social Media">
+                        <label for="3">Social Media</label><br>
+                        <input type="radio" name="hearabout" id="4" value="Other">
+                        <label for="3">Other</label><br>
+                    </p>
 
-    <label>Date of birth:</label>
-    <input type="date" name="dateofBirth" placeholder="dd/mm/yyyy" required>
+                    <h2>Would you like to receive announcements about new CDs and special offers?</h2>
+                    <div class="check-box">
+                        <input type="checkbox" name="rock">YES, I'd like that<br>
+                        <input type="checkbox" name="country">YES, please send me email announcements<br>
+                    </div><br>
+                    <label>Contact by:</label>
+                    <select name="phone"><br>
+                        <option value="email">Email</option>
+                        <option value="phone" selected>Phone number</option>
+                        <option value="facebook">Facebook</option>
+                    </select><br>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <h2>How did your hear about us?</h2>
-    <p>
-        <input type="radio" name="hearabout" id="1" value="Search engine">
-        <label for="1">Search engine</label><br>
-        <input type="radio" name="hearabout" id="2" value="Word of mouth">
-        <label for="2">Word of mouth</label><br>
-        <input type="radio" name="hearabout" id="3" value="Social Media">
-        <label for="3">Social Media</label><br>
-        <input type="radio" name="hearabout" id="4" value="Other">
-        <label for="3">Other</label><br>
-    </p>
-
-    <h2>Would you like to receive announcements about new CDs and special offers?</h2>
-    <input type="checkbox" name="rock">YES, I'd like that<br>
-    <input type="checkbox" name="country">YES, please send me email announcements<br>
-
-    <label>Contact by:</label>
-    <select name="phone"><br>
-        <option value="email">Email</option>
-        <option value="phone" selected>Phone number</option>
-        <option value="facebook">Facebook</option> </select>
-    <input type="submit" value="Submit" id="submit">
-</form>
+<section>
+    <div class="footer">
+        <div class="footer-text">
+            <p>&copy; Copyright ${currentYear} Mike Murach &amp; Associates</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="../index.html">Back to Home</a>
+        </div>
+    </div>
+</section>
 </body><br>
-<a href="../index.html">
-    <input type="submit" value="Back to Home">
-</a>
 </html>
