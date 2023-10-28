@@ -7,4 +7,5 @@
         <error-code>404</error-code>
         <location>/styles/error_404.jsp</location>
     </error-page>
+
 </web-app>

@@ -5,6 +5,7 @@
 }
 
 body {
+    height: 100%;
     font-family: Arial, sans-serif;
     background: #252a34;
     margin: 0;
@@ -107,12 +108,11 @@ p {
     color: var(--text-color);
 }
 .footer {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 9%;
     background: #323946;
-    height: 12px;
+    height: 20px;
 }.footer a {
      color: #ffffe1;
  }
@@ -233,7 +233,7 @@ i {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 .container p{
     text-align: center;
