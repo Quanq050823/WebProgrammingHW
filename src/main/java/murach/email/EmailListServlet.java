@@ -44,17 +44,15 @@ public class EmailListServlet extends HttpServlet {
             String from = "email_list@murach.com";
             String subject = "Welcome to our email list";
             String body = "Dear " + firstName + ",\n\n"
-                    + "Thanks for joining our email list. "
+                    + "Thanks for joining Coza familly. "
                     + "We'll make sure to send "
                     + "you announcements about new products "
                     + "and promotions.\n"
                     + "Have a great day and thanks again!\n\n"
-                    + "Kelly Slivkoff\n"
-                    + "Mike Murach & Associates";
+                    + "Duc Quang\n"
+                    + "Tran Phuoc Binh";
             boolean isBodyHTML = false;
             try {
-//                MailUtilLocal.sendMail(to, from, subject, body,
-//                        isBodyHTML);
                 MailUtilGmail.sendMail(to, from, subject, body,
                         isBodyHTML);
             } catch (MessagingException e) {
@@ -74,7 +72,19 @@ public class EmailListServlet extends HttpServlet {
                                 + "SUBJECT: " + subject + "\n\n"
                                 + body + "\n\n");
             }
-            url = "/C6E1/thanks.jsp";
+            // validate the parameters
+            String message;
+            if (firstName == null || lastName == null || email == null ||
+                    firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+                message = "Please fill out all three text boxes.";
+            }
+            else {
+                message = null;
+                url = "/C6E1/thanks.jsp";
+                UserDB.insert(user);
+            }
+            request.setAttribute("user", user);
+            request.setAttribute("message", message);
         }
         getServletContext()
                 .getRequestDispatcher(url)

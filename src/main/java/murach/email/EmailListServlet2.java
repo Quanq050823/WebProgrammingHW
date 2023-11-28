@@ -36,12 +36,13 @@ public class EmailListServlet2 extends HttpServlet  {
             String email = request.getParameter("email");
             String hearabout = request.getParameter("hearabout");
             String receiveA = request.getParameter("receiveA");
+            String receiveA2 = request.getParameter("receiveA2");
             String dateofBirth = request.getParameter("dateofBirth");
-            String contactby = request.getParameter("contactby");
+            String contactby =  request.getParameter("contactby");
 
 
             // store data in User object and save User object in db
-            User user = new User(firstName,lastName,email,dateofBirth,hearabout,receiveA,contactby);
+            User user = new User(firstName,lastName,email,dateofBirth,hearabout,receiveA,receiveA2,contactby);
 //            UserDB.insert(user);
 
             // set User object in request object and set URL

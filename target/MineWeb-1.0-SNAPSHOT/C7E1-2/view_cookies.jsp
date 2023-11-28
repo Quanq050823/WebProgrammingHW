@@ -14,25 +14,20 @@
             <p>Here's a table with all of the cookies that this
                 browser is sending to the current server.</p><br>
             <div class="form">
+                <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                 <table>
-                    <tbody><tr>
+                    <tr>
                         <th>Name</th>
                         <th>Value</th>
                     </tr>
-                    <tr>
-                        <td>JSESSIONID</td>
-                        <td>32D18BB83D8E4A0FC1320D00391A4A33</td>
-                    </tr>
-                    <tr>
-                        <td>firstNameCookie</td>
-                        <td>Joel</td>
-                    </tr>
-                    <tr>
-                        <td>emailCookie</td>
-                        <td>quangktkd91@gmail.com</td>
-                    </tr>
-                    </tbody>
+                    <c:forEach var="c" items="${cookie}">
+                        <tr>
+                            <td>${c.value.name}</td>
+                            <td>${c.value.value}</td>
+                        </tr>
+                    </c:forEach>
                 </table>
+
             </div>
         </div>
         <div class="botform">

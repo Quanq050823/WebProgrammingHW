@@ -108,11 +108,12 @@ p {
     color: var(--text-color);
 }
 .footer {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 9%;
     background: #323946;
-    height: 20px;
+    height: 12px;
 }.footer a {
      color: #ffffe1;
  }

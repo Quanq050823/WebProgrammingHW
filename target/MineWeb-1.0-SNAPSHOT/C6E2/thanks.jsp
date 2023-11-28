@@ -35,6 +35,15 @@
                     <label>Heard us about: </label>
                     <span>${user.hearabout}</span><br>
                 </div>
+                <div class="output">
+                    <label>receive announcements: </label><br>
+                    <span>${user.receiveA}</span><br>
+                    <span>${user.receiveA2}</span><br>
+                </div>
+                <div class="output">
+                    <label>Contact by: </label>
+                    <span>${user.contactBy}</span><br>
+                </div>
             </div><br>
             <p>To enter another email address, click on the Back
                 button in your browser or the Return button shown

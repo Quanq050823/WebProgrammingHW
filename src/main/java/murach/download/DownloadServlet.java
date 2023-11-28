@@ -1,6 +1,7 @@
 package murach.download;
 
 import murach.business.User;
+import murach.data.UserDB;
 import murach.data.UserIO;
 import murach.util.CookieUtil;
 
@@ -119,26 +120,42 @@ public class DownloadServlet extends HttpServlet {
         session.setAttribute("user", user);
 
         // add a cookie that stores the user's email to browser
-        Cookie c = new Cookie("userEmail", email);
+        Cookie c = new Cookie("emailCookie", email);
         c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 2 years
-        c.setPath("/C7E1-2/");                      // allow entire app to access it
+        c.setPath("/");                      // allow entire app to access it
         response.addCookie(c);
 
+        String message;
+        if (firstName == null || lastName == null || email == null ||
+                firstName.isEmpty() || lastName.isEmpty() || email.isEmpty()) {
+            message = "Please fill out all three text boxes.";
+
+            String url = "/C7E1-2/register.jsp";
+            request.setAttribute("user", user);
+            request.setAttribute("message", message);
+            return url;
+        }
+        else {
+            message = null;
+            UserDB.insert(user);
+            String productCode = (String) session.getAttribute("productCode");
+            String url = "/C7E1-2/" + productCode + "_download.jsp";
+            return url;
+        }
         // create and return a URL for the appropriate Download page
-        String productCode = (String) session.getAttribute("productCode");
-        String url = "/C7E1-2/" + productCode + "_download.jsp";
-        return url;
     }
 
     private String deleteCookies(HttpServletRequest request,
                                  HttpServletResponse response) {
-
         Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies) {
             cookie.setMaxAge(0); //delete the cookie
             cookie.setPath("/"); //allow the download application to access it
             response.addCookie(cookie);
         }
+        HttpSession session = request.getSession(false);
+        if (session != null)
+            session.invalidate();
         String url = "/C7E1-2/delete_cookies.jsp";
         return url;
     }

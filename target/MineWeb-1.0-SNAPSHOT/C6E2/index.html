@@ -33,7 +33,7 @@
 
                     <h2>How did your hear about us?</h2>
                     <p class="choose">
-                        <input type="radio" name="hearabout" id="1" value="Search engine">
+                        <input checked type="radio" name="hearabout" id="1" value="Search engine">
                         <label for="1">Search engine</label><br>
                         <input type="radio" name="hearabout" id="2" value="Word of mouth">
                         <label for="2">Word of mouth</label><br>
@@ -45,14 +45,14 @@
 
                     <h2>Would you like to receive announcements about new CDs and special offers?</h2>
                     <div class="check-box">
-                        <input type="checkbox" name="rock">YES, I'd like that<br>
-                        <input type="checkbox" name="country">YES, please send me email announcements<br>
+                        <input type="checkbox" name="receiveA" value="YES, I'd like that">YES, I'd like that<br>
+                        <input type="checkbox" name="receiveA2" value="YES, please send me email announcements">YES, please send me email announcements<br>
                     </div><br>
                     <label>Contact by:</label>
-                    <select name="phone"><br>
-                        <option value="email">Email</option>
-                        <option value="phone" selected>Phone number</option>
-                        <option value="facebook">Facebook</option>
+                    <select name="contactby"><br>
+                        <option value="Email" selected>Email</option>
+                        <option value="Phone number">Phone number</option>
+                        <option value="Facebook">Facebook</option>
                     </select><br>
                     <input type="submit" value="Submit" id="submit">
                 </form>

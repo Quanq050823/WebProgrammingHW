@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
     <link rel="stylesheet" href="../styles/C6E1.css" type="text/css"/>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 </head>
 <body>
 <section>
@@ -21,15 +23,12 @@
                 <form action="download" method="post">
                     <input type="hidden" name="action" value="registerUser">
                     <div class="input-box">
-                        <!--          <label class="pad_top">Email:</label>-->
                         <input placeholder="Email" type="email" name="email" value="${user.email}"><br>
                     </div>
                     <div class="input-box">
-                        <!--          <label class="pad_top">First Name:</label>-->
                         <input placeholder="First Name" type="text" name="firstName" value="${user.firstName}"><br>
                     </div>
                     <div class="input-box">
-                        <!--          <label class="pad_top">Last Name:</label>-->
                         <input placeholder="Last Name" type="text" name="lastName" value="${user.lastName}"><br>
                     </div>
                     <input type="submit" value="Register">

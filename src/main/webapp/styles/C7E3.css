@@ -20,15 +20,270 @@ br {
 
 /* The styles for the tables */
 table {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
     width: 50em;
+
 }
 th, td {
-    border: 1px solid black;
+    border: 2px solid #14c8d2;
     text-align: left;
-    padding: .5em;
+    padding: 2em;
+    background-color: #ffffff;
 }
 .right {
     text-align: right;
+}
+
+
+@charset "utf-8";
+
+*{
+    --text-color: #ffffe1;
+    --background-color: #252a34;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+p {
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+header{
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+header a{
+    flex: 1;
+    width: 50px;
+    text-align: left;
+}
+
+header h1{
+    flex: 1;
+    text-align: center;
+    font-size: 45px;
+    border: 19px;
+    border: #1d1f2a;
+    color: var(--text-color);
+}
+h1 span {
+    color: #36D4DCFF;
+}
+
+header p{
+    text-align: center;
+}
+section{
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.album_list{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 170px;
+}
+
+.album{
+    width: 240px;
+    height: 270px;
+    border: 1px solid rgb(0, 255, 225);
+    border-radius: 5%;
+    padding: 10px;
+    margin: 15px;
+    background-color: var(--background-color);
+    transition: .5s ease;
+}
+
+.album:hover{
+    box-shadow: 0 0 1rem #36D4DCFF;
+}
+
+.album:hover .album_title{
+    color: rgb(0, 255, 227);
+    font-size: 1.1em;
+}
+.album:hover .album_img{
+    width: 240px;
+    height: 220px;
+    border: 1px solid rgb(177,212,224);
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.album_img{
+    /*transform: color 2s ease;*/
+    width: 235px;
+    height: 215px;
+}
+
+a p{
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+    /*transform: color 0.5s ease;*/
+}
+
+header{
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+header a{
+    flex: 1;
+    width: 50px;
+    text-align: left;
+}
+
+header .back_zaohome{
+    margin-right: auto;
+}
+
+
+header h2{
+    flex: 1;
+    text-align: center;
+}
+.topform {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.botform {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.botform form{
+padding: 10px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: #323946;
+    height: 6vh;
+    color: var(--text-color);
+}.footer a {
+     color: #ffffe1;
+ }
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #36D4DCFF;
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem #36D4DCFF;
+}
+
+#content {
+    height: 83vh;
+}
+
+.c-button {
+    color: #000;
+    font-weight: 700;
+    font-size: 85%;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+}
+
+.c-button--gooey {
+    color: #06c8d9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid #06c8d9;
+    border-radius: 0;
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+    background-color: #06c8d9;
+    width: 34%;
+    height: 100%;
+    border-radius: 100%;
+    position: absolute;
+    transform: scale(1.4) translateY(125%) translateZ(0);
+    transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+    left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+    left: 30%;
+    transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+    left: 66%;
+    transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+    color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+    transform: scale(1.4) translateY(0) translateZ(0);
 }

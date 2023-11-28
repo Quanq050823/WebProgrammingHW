@@ -13,10 +13,10 @@
             <p style="font-size: 22px">All persistent cookies have been removed from this browser.</p>
             <div class="checkbox-wrapper">
                 <a href="../C7E1-2/index.jsp">
-                <label class="container">
+                    <label class="container">
                         <input type="checkbox" checked="checked">
                         <div class="checkmark"></div>
-                </label>
+                    </label>
                 </a>
             </div>
         </div>

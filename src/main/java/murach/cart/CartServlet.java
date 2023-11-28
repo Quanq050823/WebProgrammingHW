@@ -16,7 +16,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/C7E3/cart", name = "CartServlet")
 public class CartServlet extends HttpServlet {
-
+boolean flag = false;
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response)
@@ -64,7 +64,7 @@ public class CartServlet extends HttpServlet {
             lineItem.setProduct(product);
             lineItem.setQuantity(quantity);
             if (quantity > 0) {
-                cart.addItem(lineItem);
+                cart.addItem(lineItem, flag);
             } else if (quantity == 0) {
                 cart.removeItem(lineItem);
             }
@@ -84,6 +84,7 @@ public class CartServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response)
             throws ServletException, IOException {
+        flag = true;
         doPost(request, response);
     }
 }
