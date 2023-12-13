@@ -41,7 +41,7 @@ public class EmailListServlet extends HttpServlet {
             request.setAttribute("user", user);
             // send email to user
             String to = email;
-            String from = "email_list@murach.com";
+            String from = "coza@store.com";
             String subject = "Welcome to our email list";
             String body = "Dear " + firstName + ",\n\n"
                     + "Thanks for joining Coza familly. "

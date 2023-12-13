@@ -120,7 +120,7 @@ public class DownloadServlet extends HttpServlet {
         session.setAttribute("user", user);
 
         // add a cookie that stores the user's email to browser
-        Cookie c = new Cookie("emailCookie", email);
+            Cookie c = new Cookie("emailCookie", email);
         c.setMaxAge(60 * 60 * 24 * 365 * 3); // set age to 2 years
         c.setPath("/");                      // allow entire app to access it
         response.addCookie(c);
